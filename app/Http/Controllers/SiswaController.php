@@ -12,7 +12,6 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::all();
 
-        // Untuk Pencarian
         if ($request->has('cari')) {
             $siswa = Siswa::where('name', 'LIKE', '%' . $request->cari . '%')->get();
         }

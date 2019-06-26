@@ -15,6 +15,7 @@ class CreateTabelStep1 extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->uuid('id');
+            $table->integer('user_id');
             $table->string('name');
             $table->date('lahir');
             $table->string('agama');

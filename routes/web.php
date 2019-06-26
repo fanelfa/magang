@@ -27,3 +27,11 @@ Route::resource('guru', 'GuruController');
 Route::resource('buku', 'BukuController');
 
 Route::get('/buku/search', 'BukuController@search')->name('search');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Items
+Route::get('manage-item-ajax', 'ItemAjaxController@manageItemAjax');
+Route::resource('item-ajax', 'ItemAjaxController');

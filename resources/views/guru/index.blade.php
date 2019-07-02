@@ -37,7 +37,8 @@
                                     <a class="btn btn-danger btn-xs btn-delete" data-file="{{$value->id}}"><i class="fa fa-trash-o"></i> HAPUS</a>
 
                                     <form action="{{ route('guru.destroy', $value->id) }}" method="POST" style="display: none;" id="{{$value->id}}">
-                                        @method('DELETE') {{ csrf_field() }}
+                                        @method('DELETE')
+										@csrf
                                     </form>
 
                                     {{-- <a href="/siswa/delete/{{$value->id}}" onClick="return confirm('Yakin mau menghapus data siswa {{$value->name}}?')" class="btn btn-danger btn-sm">HAPUS</a></td> --}}

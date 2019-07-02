@@ -26,8 +26,17 @@
                         <label>Alamat</label>
                         <textarea name="alamat" class="form-control" rows="3">{{ $guru->alamat }}</textarea>
                     </div>
+                    <div class="form-group">
+                        <label>Pilih gambar</label>
+                        <input type="file" name="avatar" class="form-control">
+                        {{-- <p class="text-danger">{{ $errors->first('image') }}</p> --}}
                     </div>
-                    <button type="submit" class="btn btn-success">Simpan</button>
+                    </div>
+                    <div class="form-group">
+                        {{-- <button class="btn btn-danger btn-sm">Upload</button> --}}
+                        
+                        <button type="submit" class="btn btn-success btn-sm">Simpan</button>   
+                    </div>
                 </form>
                 <div class="float-right">
                     <a class="btn btn-danger" href="{{ route('buku.index') }}">Batal</a>

@@ -25,8 +25,13 @@
                         <label>Alamat</label>
                         <textarea name="alamat" class="form-control" rows="3"></textarea>
                     </div>
+                    <div class="form-group">
+                        <label>Pilih gambar</label>
+                        <input type="file" name="avatar" class="form-control"></input>
+                        {{-- <p class="text-danger">{{ $errors->first('image') }}</p> --}}
                     </div>
-                    <button type="submit" class="btn btn-success">Simpan</button>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">Simpan</button>
                 </form>
                 <a href="{{ route('guru.index') }}">Batal</a>
             </div>

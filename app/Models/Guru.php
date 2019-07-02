@@ -9,6 +9,6 @@ class Guru extends Model
     public $incrementing = false;
     protected $table = 'guru';
     protected $fillable = [
-        'id', 'name', 'lahir', 'nip', 'alamat',
+        'id', 'name', 'lahir', 'nip', 'alamat', 'avatar'
     ];
 }

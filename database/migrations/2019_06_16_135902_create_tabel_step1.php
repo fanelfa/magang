@@ -28,6 +28,7 @@ class CreateTabelStep1 extends Migration
             $table->string('name');
             $table->date('lahir');
             $table->text('alamat');
+            $table->string('avatar');
             $table->timestamps();
         });
     }

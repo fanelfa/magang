@@ -16,7 +16,7 @@ class BukuController extends Controller
      */
     public function index(Request $request)
     {
-        $buku = Buku::all();
+        $buku = Buku::orderBy('created_at','asc')->get();
 
         if ($request->has('cari')) {
             $buku = Buku::where('judul', 'LIKE', '%' . $request->cari . '%')->get();
@@ -101,9 +101,10 @@ class BukuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $buku = Buku::find($id);
+        $decryptid = decrypt($request['id']);
+        $buku = Buku::find($decryptid);
 
-        $data = $request->except('_token');
+        $data = $request->except(['_token','id']);
         $buku->update($data);
 
         // dd($buku->created_at);

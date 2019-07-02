@@ -29,6 +29,18 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('buku', 'BukuController');
 
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/buku/search', 'BukuController@search')->name('search');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Items
+Route::get('manage-item-ajax', 'ItemAjaxController@manageItemAjax');
+Route::resource('item-ajax', 'ItemAjaxController');
+>>>>>>> 2b936cdf5c7dd97d5a17f77142fd9bf4fc8d5ee9
